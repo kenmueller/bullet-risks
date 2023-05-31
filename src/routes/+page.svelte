@@ -1,9 +1,16 @@
+<script lang="ts">
+	import margo from '$lib/margo.jpg'
+	import bullets from '$lib/bullets.jpg'
+	import deer from '$lib/deer.jpg'
+</script>
+
 <svelte:head>
 	<title>Lead Bullet Risks for Wildlife and Humans</title>
 	<meta
 		name="description"
 		content="Hunters use lead ammunition to kill and wound animals. The lead fragments in their bodies and contaminates their meat and causes many effects when consumed. Human activity directly contributes to the problem by being the ones to shoot the bullets that remain in carcasses. This environmental problem isn't changing much over time, but there is more awareness now than ever due to the articles published. However, lead doesn't degrade or become less toxic over time, so the effects of lead are still being in motion."
 	/>
+	<meta name="og:image" content={margo} />
 </svelte:head>
 
 <div class="root">
@@ -15,6 +22,10 @@
 
 	<main>
 		<div class="inner">
+			<section>
+				<img src={margo} alt="Margo" />
+			</section>
+
 			<section>
 				<p>
 					Hunters use lead ammunition to kill and wound animals. The lead fragments in their bodies
@@ -36,6 +47,7 @@
 					toxic while being in the bodies of both animals and humans. Groups of people that eat a
 					lot of meat, especially ground meat, are likely more exposed to lead poisoning.
 				</p>
+				<img src={bullets} alt="Lead bullets" />
 			</section>
 
 			<section>
@@ -48,6 +60,7 @@
 					for Wildlife & Humans explains how Lead Bullets have a huge negative impact on condors and
 					other wildlife.
 				</p>
+				<img src={deer} alt="A cute deer" />
 			</section>
 
 			<section>
@@ -118,7 +131,14 @@
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
-		gap: 0.5rem;
+		gap: 1rem;
+	}
+
+	img {
+		max-width: 100%;
+		max-height: 650px;
+		margin: 0 auto;
+		border-radius: 1rem;
 	}
 
 	.footer-message {
