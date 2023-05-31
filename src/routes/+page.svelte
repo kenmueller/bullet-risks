@@ -99,7 +99,7 @@
 	footer {
 		flex-shrink: 0;
 		padding: 1rem 0;
-		background: rgba(gray, 0.1);
+		background: #2f3335;
 	}
 
 	main {
